@@ -1,50 +1,71 @@
 /* Liberia Online Library — App Logic */
 
 const books = [
-  // History
+  // ========== HISTORY (Real free resources) ==========
   {
     id: 1,
-    title: "A History of Liberia",
-    author: "Various Sources",
+    title: "Liberia: Description, History, Problems",
+    author: "Frederick Starr",
     category: "history",
-    description: "An accessible overview of Liberia from the arrival of the first settlers in 1822 through independence and the modern era.",
-    tags: ["History", "Nation Building"],
+    description: "A classic 1913 account of Liberia covering its description, history, and challenges. Fully free and public domain on Project Gutenberg.",
+    tags: ["History", "Classic", "Free Download"],
     icon: "🏛️",
-    link: "https://www.gutenberg.org/"
+    link: "https://www.gutenberg.org/ebooks/54542"
   },
   {
     id: 2,
-    title: "The Lone Star: The Story of Liberia",
-    author: "Historical Archive",
+    title: "History of Liberia",
+    author: "Thomas H. B. Walker",
     category: "history",
-    description: "The founding of Africa’s first republic and the people who shaped its early years.",
+    description: "Early 20th-century history of Liberia written by a Liberian. Available free on Internet Archive.",
+    tags: ["History", "Liberian Author", "Free"],
+    icon: "📜",
+    link: "https://archive.org/details/historyofliberia00walk"
+  },
+  {
+    id: 3,
+    title: "Liberia as I Found It in 1858",
+    author: "Alexander M. Cowan",
+    category: "history",
+    description: "First-hand observations of Liberia in the mid-19th century. Free on Internet Archive.",
+    tags: ["History", "Travel", "Free"],
+    icon: "🗺️",
+    link: "https://archive.org/details/liberiaasifoundi00cowa"
+  },
+  {
+    id: 4,
+    title: "The Lone Star Republic",
+    author: "Educational Series",
+    category: "history",
+    description: "The story of how Liberia became Africa’s first independent republic and the people who built it.",
     tags: ["History", "Founding"],
     icon: "⭐",
     link: null
   },
   {
-    id: 3,
-    title: "Liberia: Portrait of a Country",
-    author: "Educational Series",
+    id: 5,
+    title: "Presidents of Liberia",
+    author: "Historical Archive",
     category: "history",
-    description: "Geography, people, counties, and the rich diversity of Liberia’s regions.",
-    tags: ["Geography", "Culture"],
-    icon: "🗺️",
+    description: "A guide to the leaders who have guided Liberia from Joseph Jenkins Roberts to the present day.",
+    tags: ["History", "Leaders"],
+    icon: "👔",
     link: null
   },
-  // Culture
+
+  // ========== CULTURE & FOLKLORE ==========
   {
-    id: 4,
+    id: 6,
     title: "Liberian Proverbs & Wisdom",
     author: "Oral Tradition",
     category: "culture",
-    description: "A collection of proverbs from across Liberia’s ethnic groups — wisdom for daily life.",
+    description: "Proverbs from across Liberia’s ethnic groups — short sayings that carry deep wisdom for daily life.",
     tags: ["Proverbs", "Wisdom"],
     icon: "💬",
     link: null
   },
   {
-    id: 5,
+    id: 7,
     title: "Folktales of Liberia",
     author: "Traditional Storytellers",
     category: "culture",
@@ -54,7 +75,7 @@ const books = [
     link: null
   },
   {
-    id: 6,
+    id: 8,
     title: "The Sixteen Tribes of Liberia",
     author: "Cultural Studies",
     category: "culture",
@@ -63,9 +84,20 @@ const books = [
     icon: "🌍",
     link: null
   },
-  // Education
   {
-    id: 7,
+    id: 9,
+    title: "Storybooks Liberia Collection",
+    author: "African Storybook / Global Storybooks",
+    category: "culture",
+    description: "Free open children’s stories available in English and major Liberian languages. Download and read offline.",
+    tags: ["Children", "Free", "Open Access"],
+    icon: "📖",
+    link: "https://global-asp.github.io/storybooks-liberia/"
+  },
+
+  // ========== EDUCATION ==========
+  {
+    id: 10,
     title: "Basic Mathematics for Liberian Students",
     author: "Education Series",
     category: "education",
@@ -75,7 +107,7 @@ const books = [
     link: null
   },
   {
-    id: 8,
+    id: 11,
     title: "English for Everyday Liberia",
     author: "Language Series",
     category: "education",
@@ -85,7 +117,7 @@ const books = [
     link: null
   },
   {
-    id: 9,
+    id: 12,
     title: "Study Skills for Success",
     author: "Student Guide",
     category: "education",
@@ -94,29 +126,50 @@ const books = [
     icon: "📚",
     link: null
   },
-  // Agriculture
   {
-    id: 10,
-    title: "Growing Rice in Liberia",
-    author: "Agricultural Extension",
+    id: 13,
+    title: "Project Gutenberg Free Library",
+    author: "Project Gutenberg",
+    category: "education",
+    description: "Over 70,000 free eBooks you can read online or download. Great for classic literature and learning.",
+    tags: ["Free Books", "Classics"],
+    icon: "🆓",
+    link: "https://www.gutenberg.org/"
+  },
+
+  // ========== AGRICULTURE (Real resources) ==========
+  {
+    id: 14,
+    title: "Guide to Rice Culture in Lowland",
+    author: "Central Agricultural Research Institute (CARI)",
     category: "agriculture",
-    description: "Practical guidance on upland and swamp rice cultivation suited to Liberian conditions.",
-    tags: ["Rice", "Farming"],
+    description: "Practical field guide for lowland rice production in Liberia. Free PDF from CARI researchers.",
+    tags: ["Rice", "Farming", "Free PDF"],
     icon: "🌾",
-    link: null
+    link: "https://zenodo.org/records/6414161/files/WJARR-2022-0254.pdf?download=1"
   },
   {
-    id: 11,
+    id: 15,
+    title: "Rice Production Training Manuals",
+    author: "Ministry of Agriculture, Liberia",
+    category: "agriculture",
+    description: "Official guides covering nursery preparation, fertiliser use, transplanting, weed control, and more.",
+    tags: ["Rice", "Official", "Free"],
+    icon: "📋",
+    link: "https://moa.gov.lr/publications/document-type/rice-how-do-tips"
+  },
+  {
+    id: 16,
     title: "Cassava: From Field to Table",
     author: "Farm Knowledge",
     category: "agriculture",
-    description: "Planting, pest control, processing, and storage of cassava — a Liberian staple.",
+    description: "Planting, pest control, processing, and storage of cassava — a Liberian staple food.",
     tags: ["Cassava", "Food"],
     icon: "🥔",
     link: null
   },
   {
-    id: 12,
+    id: 17,
     title: "Cocoa Farming Basics",
     author: "Agricultural Guide",
     category: "agriculture",
@@ -125,9 +178,20 @@ const books = [
     icon: "🍫",
     link: null
   },
-  // Business
   {
-    id: 13,
+    id: 18,
+    title: "Growing Vegetables in Liberia",
+    author: "Extension Series",
+    category: "agriculture",
+    description: "Practical advice for home gardens and market gardening with local crops and conditions.",
+    tags: ["Vegetables", "Garden"],
+    icon: "🥬",
+    link: null
+  },
+
+  // ========== BUSINESS ==========
+  {
+    id: 19,
     title: "Starting a Small Business in Liberia",
     author: "Entrepreneurship Series",
     category: "business",
@@ -137,7 +201,7 @@ const books = [
     link: null
   },
   {
-    id: 14,
+    id: 20,
     title: "Simple Bookkeeping for Traders",
     author: "Business Skills",
     category: "business",
@@ -147,7 +211,7 @@ const books = [
     link: null
   },
   {
-    id: 15,
+    id: 21,
     title: "Market Skills & Customer Care",
     author: "Trade Guide",
     category: "business",
@@ -156,19 +220,50 @@ const books = [
     icon: "🤝",
     link: null
   },
-  // Children
+
+  // ========== CHILDREN ==========
   {
-    id: 16,
-    title: "Anansi and the Liberian Forest",
-    author: "Children’s Stories",
+    id: 22,
+    title: "Goat, Dog, and Cow",
+    author: "African Storybook",
     category: "children",
-    description: "A fun story about the clever spider and the animals of the Liberian rainforest.",
-    tags: ["Story", "Ages 5-10"],
-    icon: "🕷️",
-    link: null
+    description: "A fun story about three animal friends who take a taxi. Free to read and download from Storybooks Liberia.",
+    tags: ["Story", "Ages 5-10", "Free"],
+    icon: "🐐",
+    link: "https://global-asp.github.io/storybooks-liberia/stories/en/0004/"
   },
   {
-    id: 17,
+    id: 23,
+    title: "Why Hippos Have No Hair",
+    author: "African Storybook",
+    category: "children",
+    description: "A classic African animal story explaining why hippos stay near water. Free download available.",
+    tags: ["Story", "Folktale", "Free"],
+    icon: "🦛",
+    link: "https://global-asp.github.io/storybooks-liberia/stories/en/0111/"
+  },
+  {
+    id: 24,
+    title: "I Like to Read!",
+    author: "African Storybook",
+    category: "children",
+    description: "A simple story that encourages children to love reading. Perfect for early learners.",
+    tags: ["Story", "Ages 3-7", "Free"],
+    icon: "📕",
+    link: "https://global-asp.github.io/storybooks-liberia/stories/en/0087/"
+  },
+  {
+    id: 25,
+    title: "Hen and Eagle",
+    author: "African Storybook",
+    category: "children",
+    description: "An African folktale about friendship, sharing, and why eagles hunt chickens. Free to download.",
+    tags: ["Story", "Folktale", "Free"],
+    icon: "🐔",
+    link: "https://global-asp.github.io/storybooks-liberia/stories/en/0158/"
+  },
+  {
+    id: 26,
     title: "My First Liberian ABC",
     author: "Early Learning",
     category: "children",
@@ -177,19 +272,10 @@ const books = [
     icon: "🔤",
     link: null
   },
+
+  // ========== SCIENCE & HEALTH ==========
   {
-    id: 18,
-    title: "The Little Farmer",
-    author: "Children’s Series",
-    category: "children",
-    description: "A picture story about a child learning to grow food with their family.",
-    tags: ["Story", "Farming"],
-    icon: "👦",
-    link: null
-  },
-  // Science & Health
-  {
-    id: 19,
+    id: 27,
     title: "Science Around Us",
     author: "Science for All",
     category: "science",
@@ -199,7 +285,7 @@ const books = [
     link: null
   },
   {
-    id: 20,
+    id: 28,
     title: "Staying Healthy in Liberia",
     author: "Health Education",
     category: "health",
@@ -209,22 +295,44 @@ const books = [
     link: null
   },
   {
-    id: 21,
+    id: 29,
+    title: "Malaria Prevention Guide",
+    author: "Health Series",
+    category: "health",
+    description: "Practical steps every family can take to reduce the risk of malaria.",
+    tags: ["Health", "Malaria"],
+    icon: "🦟",
+    link: null
+  },
+
+  // ========== LITERATURE ==========
+  {
+    id: 30,
     title: "Murder in the Cassava Patch",
     author: "Bai T. Moore",
     category: "literature",
-    description: "A classic Liberian novel of love, jealousy, and tragedy set in a rural community.",
-    tags: ["Novel", "Classic"],
+    description: "Liberia’s most famous novella. A powerful story of love, jealousy and tragedy set in a rural community. Required reading in many Liberian schools.",
+    tags: ["Novel", "Classic", "Liberian Author"],
     icon: "📖",
     link: null
   },
   {
-    id: 22,
+    id: 31,
+    title: "Ebony Dust",
+    author: "Bai T. Moore",
+    category: "literature",
+    description: "A collection of poems by one of Liberia’s greatest writers, drawing on village life and Liberian experience.",
+    tags: ["Poetry", "Classic", "Liberian Author"],
+    icon: "🪶",
+    link: null
+  },
+  {
+    id: 32,
     title: "The Rain and the Night",
     author: "Wilton Sankawulo",
     category: "literature",
-    description: "Powerful short stories capturing Liberian life, struggle, and hope.",
-    tags: ["Stories", "Classic"],
+    description: "Powerful short stories capturing Liberian life, struggle, and hope by a former Head of State and celebrated writer.",
+    tags: ["Stories", "Classic", "Liberian Author"],
     icon: "🌧️",
     link: null
   }
@@ -318,7 +426,7 @@ function openBook(book) {
       <div class="modal-actions">
         ${
           book.link
-            ? `<a class="btn btn-primary" href="${book.link}" target="_blank" rel="noopener">Open Resource →</a>`
+            ? `<a class="btn btn-primary" href="${book.link}" target="_blank" rel="noopener">Open / Download →</a>`
             : `<button class="btn btn-primary" disabled>Reading coming soon</button>`
         }
         <button class="btn btn-secondary" id="modalCloseBtn">Close</button>
