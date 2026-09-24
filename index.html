@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Liberia Online Library — Free access to books, educational resources, Liberian history, culture, and knowledge for every Liberian." />
+  <title>Liberia Online Library — Knowledge for Every Liberian</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="container header-inner">
+      <a href="/" class="logo">
+        <span class="logo-icon">📚</span>
+        <span class="logo-text">Liberia<span>Library</span></span>
+      </a>
+      <nav class="nav" id="nav">
+        <a href="#collections">Collections</a>
+        <a href="#categories">Categories</a>
+        <a href="#books">Books</a>
+        <a href="#authors">Authors</a>
+        <a href="#about">About</a>
+      </nav>
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">☰</button>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container hero-inner">
+      <div class="hero-content">
+        <p class="hero-eyebrow">Liberia's Digital Knowledge Hub</p>
+        <h1>Knowledge for<br />Every Liberian</h1>
+        <p class="hero-sub">Free books, educational resources, history, culture, and learning materials — available anytime, anywhere, even on slow connections.</p>
+        
+        <div class="search-box">
+          <input type="search" id="searchInput" placeholder="Search books, authors, topics..." autocomplete="off" />
+          <button type="button" id="searchBtn">Search</button>
+        </div>
+        <p class="search-hint">Try: “Liberian history”, “agriculture”, “children stories”, “business”</p>
+      </div>
+      <div class="hero-stats">
+        <div class="stat">
+          <strong id="bookCount">120+</strong>
+          <span>Books & Resources</span>
+        </div>
+        <div class="stat">
+          <strong>Free</strong>
+          <span>Forever</span>
+        </div>
+        <div class="stat">
+          <strong>2G</strong>
+          <span>Ready</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Collections -->
+  <section class="section" id="collections">
+    <div class="container">
+      <div class="section-header">
+        <h2>Featured Collections</h2>
+        <p>Curated knowledge for Liberians, by Liberians, and about Liberia</p>
+      </div>
+      <div class="collections-grid">
+        <article class="collection-card" data-category="history">
+          <div class="collection-icon">🏛️</div>
+          <h3>Liberian History</h3>
+          <p>From the founding of the republic to modern times — the stories that shaped our nation.</p>
+          <span class="collection-count">28 resources</span>
+        </article>
+        <article class="collection-card" data-category="culture">
+          <div class="collection-icon">🎭</div>
+          <h3>Culture & Folklore</h3>
+          <p>Proverbs, folktales, traditions, and the living heritage of Liberia’s 16 tribes.</p>
+          <span class="collection-count">22 resources</span>
+        </article>
+        <article class="collection-card" data-category="education">
+          <div class="collection-icon">📖</div>
+          <h3>Education & Learning</h3>
+          <p>Textbooks, study guides, and learning materials for students of all ages.</p>
+          <span class="collection-count">35 resources</span>
+        </article>
+        <article class="collection-card" data-category="agriculture">
+          <div class="collection-icon">🌾</div>
+          <h3>Agriculture & Farming</h3>
+          <p>Practical knowledge for rice, cassava, cocoa, and sustainable farming in Liberia.</p>
+          <span class="collection-count">18 resources</span>
+        </article>
+        <article class="collection-card" data-category="business">
+          <div class="collection-icon">💼</div>
+          <h3>Business & Entrepreneurship</h3>
+          <p>Starting and growing businesses, bookkeeping, and market skills for Liberians.</p>
+          <span class="collection-count">15 resources</span>
+        </article>
+        <article class="collection-card" data-category="children">
+          <div class="collection-icon">🧒</div>
+          <h3>Children’s Corner</h3>
+          <p>Stories, picture books, and early learning materials for the next generation.</p>
+          <span class="collection-count">20 resources</span>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Categories -->
+  <section class="section section-alt" id="categories">
+    <div class="container">
+      <div class="section-header">
+        <h2>Browse by Category</h2>
+        <p>Find exactly what you need</p>
+      </div>
+      <div class="category-pills" id="categoryPills">
+        <button class="pill active" data-filter="all">All</button>
+        <button class="pill" data-filter="history">History</button>
+        <button class="pill" data-filter="culture">Culture</button>
+        <button class="pill" data-filter="education">Education</button>
+        <button class="pill" data-filter="agriculture">Agriculture</button>
+        <button class="pill" data-filter="business">Business</button>
+        <button class="pill" data-filter="children">Children</button>
+        <button class="pill" data-filter="science">Science</button>
+        <button class="pill" data-filter="health">Health</button>
+        <button class="pill" data-filter="literature">Literature</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Books Grid -->
+  <section class="section" id="books">
+    <div class="container">
+      <div class="section-header">
+        <h2>Explore the Library</h2>
+        <p id="resultsInfo">Showing all available resources</p>
+      </div>
+      <div class="books-grid" id="booksGrid">
+        <!-- Books injected by JavaScript -->
+      </div>
+      <div class="empty-state" id="emptyState" hidden>
+        <p>No books found for this search. Try a different word or category.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Liberian Authors -->
+  <section class="section section-alt" id="authors">
+    <div class="container">
+      <div class="section-header">
+        <h2>Liberian Voices</h2>
+        <p>Authors, thinkers, and storytellers from Liberia</p>
+      </div>
+      <div class="authors-grid">
+        <div class="author-card">
+          <div class="author-avatar">EW</div>
+          <h3>Edward Wilmot Blyden</h3>
+          <p>Pan-Africanist, educator, and one of Liberia’s most important intellectual voices.</p>
+        </div>
+        <div class="author-card">
+          <div class="author-avatar">BS</div>
+          <h3>Bai T. Moore</h3>
+          <p>Poet and novelist. Author of the beloved Liberian classic <em>Murder in the Cassava Patch</em>.</p>
+        </div>
+        <div class="author-card">
+          <div class="author-avatar">WD</div>
+          <h3>Wilton Sankawulo</h3>
+          <p>Writer, educator, and former Head of State. Known for powerful storytelling rooted in Liberian life.</p>
+        </div>
+        <div class="author-card">
+          <div class="author-avatar">EM</div>
+          <h3>Elma Shaw</h3>
+          <p>Contemporary Liberian author exploring identity, conflict, and resilience.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mission / About -->
+  <section class="section" id="about">
+    <div class="container about-grid">
+      <div class="about-content">
+        <h2>Built for Liberia</h2>
+        <p>The Liberia Online Library exists so that every Liberian — whether in Monrovia, Lofa, Maryland, or the diaspora — can access knowledge freely.</p>
+        <p>We focus on resources that matter here: our history, our languages, our farming knowledge, our children’s education, and the skills needed to build businesses and communities.</p>
+        <p>This library is designed to work on slow connections and simple phones. No heavy apps. No paywalls. Just knowledge.</p>
+        <ul class="about-list">
+          <li>100% free forever</li>
+          <li>Works on 2G and low-end phones</li>
+          <li>Liberian history, culture & practical knowledge</li>
+          <li>Open for students, teachers, farmers & entrepreneurs</li>
+        </ul>
+      </div>
+      <div class="about-card">
+        <h3>How to use this library</h3>
+        <ol>
+          <li>Search or browse by category</li>
+          <li>Open a book or resource</li>
+          <li>Read online or download when available</li>
+          <li>Share with friends and family</li>
+        </ol>
+        <p class="about-note">Many resources link to free open libraries (Project Gutenberg, Open Library, African Storybook, and others).</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <span class="logo-icon">📚</span>
+        <strong>Liberia Online Library</strong>
+        <p>Knowledge for Every Liberian</p>
+      </div>
+      <div class="footer-links">
+        <a href="#collections">Collections</a>
+        <a href="#books">Books</a>
+        <a href="#authors">Authors</a>
+        <a href="#about">About</a>
+      </div>
+      <div class="footer-meta">
+        <p>Built with ❤️ for Liberia</p>
+        <p class="small">A project in the spirit of open knowledge and education for all.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Book Modal -->
+  <div class="modal" id="bookModal" hidden>
+    <div class="modal-backdrop" id="modalBackdrop"></div>
+    <div class="modal-content">
+      <button class="modal-close" id="modalClose" aria-label="Close">×</button>
+      <div id="modalBody"></div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
